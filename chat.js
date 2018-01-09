@@ -8,9 +8,9 @@ $(document).ready(function(){
     var passcode = $("#connect_passcode").val();
     destination_send = $("#destination_send").val();
 	destination_subscribe = $("#destination_subscribe").val();
-	//var ws = new SockJS(url);
-	//client = Stomp.over(ws)
-    client = Stomp.client(url);
+	var ws = new SockJS(url);
+	client = Stomp.over(ws)
+    //client = Stomp.client(url);
 
     // this allows to display debug logs directly on the web page
     debug = function(str) {
